@@ -2,14 +2,14 @@
 <xs:schema id="sedentralDataSet" targetNamespace="http://tempuri.org/sedentralDataSet.xsd" xmlns:mstns="http://tempuri.org/sedentralDataSet.xsd" xmlns="http://tempuri.org/sedentralDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="Query_b" GeneratorFunctionsComponentClassName="Query_b" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="Query_b" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Se_dentral_sql" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Se_dentral_sql (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Dentral.My.MySettings.GlobalReference.Default.Se_dentral_sql" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Dentral_Conn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Dentral_Conn (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Dentral.My.MySettings.GlobalReference.Default.Dentral_Conn" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DepartmentTableAdapter" GeneratorDataComponentClassName="DepartmentTableAdapter" Name="Department" UserDataComponentName="DepartmentTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.Department" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.Department" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Department] WHERE (([Dep_ID] = @Original_Dep_ID) AND ((@IsNull_Dep_Name = 1 AND [Dep_Name] IS NULL) OR ([Dep_Name] = @Original_Dep_Name)) AND ((@IsNull_Count = 1 AND [Count] IS NULL) OR ([Count] = @Original_Count)))</CommandText>
@@ -65,7 +65,7 @@ SELECT Dep_ID, Dep_Name, Count FROM Department WHERE (Dep_ID = @Dep_ID)</Command
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeTableAdapter" GeneratorDataComponentClassName="EmployeeTableAdapter" Name="Employee" UserDataComponentName="EmployeeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.Employee" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.Employee" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Employee] WHERE (([Emp_ID] = @Original_Emp_ID) AND ((@IsNull_Emp_Fname = 1 AND [Emp_Fname] IS NULL) OR ([Emp_Fname] = @Original_Emp_Fname)) AND ((@IsNull_Emp_Lname = 1 AND [Emp_Lname] IS NULL) OR ([Emp_Lname] = @Original_Emp_Lname)) AND ((@IsNull_Emp_Gender = 1 AND [Emp_Gender] IS NULL) OR ([Emp_Gender] = @Original_Emp_Gender)) AND ((@IsNull_Emp_Salary = 1 AND [Emp_Salary] IS NULL) OR ([Emp_Salary] = @Original_Emp_Salary)) AND ((@IsNull_Emp_Dep = 1 AND [Emp_Dep] IS NULL) OR ([Emp_Dep] = @Original_Emp_Dep)))</CommandText>
@@ -142,7 +142,7 @@ SELECT Emp_ID, Emp_Fname, Emp_Lname, Emp_Gender, Emp_Salary, Emp_Dep FROM Employ
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="List_Medi_drugTableAdapter" GeneratorDataComponentClassName="List_Medi_drugTableAdapter" Name="List_Medi_drug" UserDataComponentName="List_Medi_drugTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.List_Medi_drug" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.List_Medi_drug" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[List_Medi_drug] WHERE (([List_Id] = @Original_List_Id) AND ((@IsNull_List_id_report = 1 AND [List_id_report] IS NULL) OR ([List_id_report] = @Original_List_id_report)) AND ((@IsNull_List_detail = 1 AND [List_detail] IS NULL) OR ([List_detail] = @Original_List_detail)) AND ((@IsNull_List_count = 1 AND [List_count] IS NULL) OR ([List_count] = @Original_List_count)))</CommandText>
@@ -205,7 +205,7 @@ SELECT List_Id, List_id_report, List_detail, List_count FROM List_Medi_drug WHER
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Medi_suppliesTableAdapter" GeneratorDataComponentClassName="Medi_suppliesTableAdapter" Name="Medi_supplies" UserDataComponentName="Medi_suppliesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.Medi_supplies" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.Medi_supplies" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Medi_supplies] WHERE (([medi_supplies_Id] = @Original_medi_supplies_Id) AND ((@IsNull_medi_supplies_name = 1 AND [medi_supplies_name] IS NULL) OR ([medi_supplies_name] = @Original_medi_supplies_name)) AND ((@IsNull_medi_supplies_price = 1 AND [medi_supplies_price] IS NULL) OR ([medi_supplies_price] = @Original_medi_supplies_price)) AND ((@IsNull_medi_supplies_detail = 1 AND [medi_supplies_detail] IS NULL) OR ([medi_supplies_detail] = @Original_medi_supplies_detail)) AND ((@IsNull_medi_supplies_count = 1 AND [medi_supplies_count] IS NULL) OR ([medi_supplies_count] = @Original_medi_supplies_count)) AND ((@IsNull_medi_supplies_type = 1 AND [medi_supplies_type] IS NULL) OR ([medi_supplies_type] = @Original_medi_supplies_type)))</CommandText>
@@ -282,7 +282,7 @@ SELECT medi_supplies_Id, medi_supplies_name, medi_supplies_price, medi_supplies_
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PatientTableAdapter" GeneratorDataComponentClassName="PatientTableAdapter" Name="Patient" UserDataComponentName="PatientTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.Patient" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.Patient" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Patient] WHERE (([patient_Id] = @Original_patient_Id) AND ((@IsNull_patient_Fname = 1 AND [patient_Fname] IS NULL) OR ([patient_Fname] = @Original_patient_Fname)) AND ((@IsNull_patient_Lname = 1 AND [patient_Lname] IS NULL) OR ([patient_Lname] = @Original_patient_Lname)) AND ((@IsNull_patient_Gender = 1 AND [patient_Gender] IS NULL) OR ([patient_Gender] = @Original_patient_Gender)) AND ((@IsNull_patient_Birth = 1 AND [patient_Birth] IS NULL) OR ([patient_Birth] = @Original_patient_Birth)) AND ((@IsNull_patient_Wight = 1 AND [patient_Wight] IS NULL) OR ([patient_Wight] = @Original_patient_Wight)) AND ((@IsNull_patient_Height = 1 AND [patient_Height] IS NULL) OR ([patient_Height] = @Original_patient_Height)) AND ([patient_allergic_druge] = @Original_patient_allergic_druge) AND ((@IsNull_patient_id_card = 1 AND [patient_id_card] IS NULL) OR ([patient_id_card] = @Original_patient_id_card)) AND ((@IsNull_patient_nation = 1 AND [patient_nation] IS NULL) OR ([patient_nation] = @Original_patient_nation)) AND ((@IsNull_patient_ethticity = 1 AND [patient_ethticity] IS NULL) OR ([patient_ethticity] = @Original_patient_ethticity)) AND ((@IsNull_patient_regal = 1 AND [patient_regal] IS NULL) OR ([patient_regal] = @Original_patient_regal)) AND ((@IsNull_patient_tel = 1 AND [patient_tel] IS NULL) OR ([patient_tel] = @Original_patient_tel)) AND ((@IsNull_patient_tel_home = 1 AND [patient_tel_home] IS NULL) OR ([patient_tel_home] = @Original_patient_tel_home)) AND ((@IsNull_contact_fname = 1 AND [contact_fname] IS NULL) OR ([contact_fname] = @Original_contact_fname)) AND ((@IsNull_contact_lname = 1 AND [contact_lname] IS NULL) OR ([contact_lname] = @Original_contact_lname)) AND ((@IsNull_contact_tel = 1 AND [contact_tel] IS NULL) OR ([contact_tel] = @Original_contact_tel)) AND ((@IsNull_contact_relation = 1 AND [contact_relation] IS NULL) OR ([contact_relation] = @Original_contact_relation)))</CommandText>
@@ -441,7 +441,7 @@ SELECT patient_Id, patient_Fname, patient_Lname, patient_Gender, patient_Birth, 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reportTableAdapter" GeneratorDataComponentClassName="reportTableAdapter" Name="report" UserDataComponentName="reportTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.report" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.report" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[report] WHERE (([report_id] = @Original_report_id) AND ((@IsNull_report_patient = 1 AND [report_patient] IS NULL) OR ([report_patient] = @Original_report_patient)) AND ((@IsNull_report_date = 1 AND [report_date] IS NULL) OR ([report_date] = @Original_report_date)) AND ((@IsNull_report_appoint_date = 1 AND [report_appoint_date] IS NULL) OR ([report_appoint_date] = @Original_report_appoint_date)) AND ((@IsNull_report_appoint_time = 1 AND [report_appoint_time] IS NULL) OR ([report_appoint_time] = @Original_report_appoint_time)) AND ((@IsNull_report_appoint_emp = 1 AND [report_appoint_emp] IS NULL) OR ([report_appoint_emp] = @Original_report_appoint_emp)) AND ((@IsNull_report_sum_price = 1 AND [report_sum_price] IS NULL) OR ([report_sum_price] = @Original_report_sum_price)) AND ((@IsNull_report_status = 1 AND [report_status] IS NULL) OR ([report_status] = @Original_report_status)))</CommandText>
@@ -532,7 +532,7 @@ SELECT report_id, report_patient, report_date, report_appoint_date, report_appoi
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="report_typeTableAdapter" GeneratorDataComponentClassName="report_typeTableAdapter" Name="report_type" UserDataComponentName="report_typeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.report_type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.report_type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[report_type] WHERE (([report_type] = @Original_report_type) AND ((@IsNull_type_name = 1 AND [type_name] IS NULL) OR ([type_name] = @Original_type_name)))</CommandText>
@@ -581,7 +581,7 @@ SELECT report_type, type_name FROM report_type WHERE (report_type = @report_type
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sup_typeTableAdapter" GeneratorDataComponentClassName="sup_typeTableAdapter" Name="sup_type" UserDataComponentName="sup_typeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.sup_type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.sup_type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[sup_type] WHERE (([sup_type] = @Original_sup_type) AND ((@IsNull_type_name = 1 AND [type_name] IS NULL) OR ([type_name] = @Original_type_name)))</CommandText>
@@ -631,7 +631,7 @@ SELECT sup_type, type_name FROM sup_type WHERE (sup_type = @sup_type)</CommandTe
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserTableAdapter" GeneratorDataComponentClassName="UserTableAdapter" Name="User" UserDataComponentName="UserTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[User] WHERE (([User_ID] = @Original_User_ID) AND ((@IsNull_User_Pass = 1 AND [User_Pass] IS NULL) OR ([User_Pass] = @Original_User_Pass)) AND ((@IsNull_Fori_User_Id = 1 AND [Fori_User_Id] IS NULL) OR ([Fori_User_Id] = @Original_Fori_User_Id)) AND ((@IsNull_User_Access = 1 AND [User_Access] IS NULL) OR ([User_Access] = @Original_User_Access)))</CommandText>
@@ -691,11 +691,53 @@ SELECT User_ID, User_Pass, Fori_User_Id, User_Access FROM [User] WHERE (User_ID 
               <Mapping SourceColumn="Fori_User_Id" DataSetColumn="Fori_User_Id" />
               <Mapping SourceColumn="User_Access" DataSetColumn="User_Access" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [dbo].[User] WHERE ([User_ID] = @Original_User_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_User_ID" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Original_User_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[User] ([User_ID], [User_Pass], [Fori_User_Id], [User_Access]) VALUES (@User_ID, @User_Pass, @Fori_User_Id, @User_Access);
+SELECT User_ID, User_Pass, Fori_User_Id, User_Access FROM [User] WHERE (User_ID = @User_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="User_ID" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@User_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="User_Pass" ColumnName="User_Pass" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@User_Pass" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Pass" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fori_User_Id" ColumnName="Fori_User_Id" DataSourceName="sedentral.dbo.[User]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Fori_User_Id" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Fori_User_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="User_Access" ColumnName="User_Access" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@User_Access" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Access" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       [User]
+SET                User_ID = @User_ID, User_Pass = @User_Pass, Fori_User_Id = @Fori_User_Id, User_Access = @User_Access
+WHERE        (User_ID = @O_User_ID);  
+SELECT User_ID, User_Pass, Fori_User_Id, User_Access FROM [User] WHERE (User_ID = @User_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="User_ID" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@User_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="User_Pass" ColumnName="User_Pass" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@User_Pass" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Pass" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fori_User_Id" ColumnName="Fori_User_Id" DataSourceName="sedentral.dbo.[User]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Fori_User_Id" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Fori_User_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="User_Access" ColumnName="User_Access" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@User_Access" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Access" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="O_User_ID" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@O_User_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="user_typeTableAdapter" GeneratorDataComponentClassName="user_typeTableAdapter" Name="user_type" UserDataComponentName="user_typeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.user_type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.user_type" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[user_type] WHERE (([user_type] = @Original_user_type) AND ((@IsNull_type_name = 1 AND [type_name] IS NULL) OR ([type_name] = @Original_type_name)))</CommandText>
@@ -744,7 +786,7 @@ SELECT user_type, type_name FROM user_type WHERE (user_type = @user_type)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="medi_showTableAdapter" GeneratorDataComponentClassName="medi_showTableAdapter" Name="medi_show" UserDataComponentName="medi_showTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.medi_show" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.medi_show" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT รหัสยา, ชื่อยา, รายละเอียด, [ราคา/หน่วย], [จำนวน(ที่มี)] FROM dbo.medi_show</CommandText>
@@ -764,7 +806,7 @@ SELECT user_type, type_name FROM user_type WHERE (user_type = @user_type)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="record_showTableAdapter" GeneratorDataComponentClassName="record_showTableAdapter" Name="record_show" UserDataComponentName="record_showTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.record_show" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.record_show" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT report_id, patient_Fname, patient_Lname, type_name FROM dbo.record_show</CommandText>
@@ -783,7 +825,7 @@ SELECT user_type, type_name FROM user_type WHERE (user_type = @user_type)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="User_AdminTableAdapter" GeneratorDataComponentClassName="User_AdminTableAdapter" Name="User_Admin" UserDataComponentName="User_AdminTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectName="sedentral.dbo.User_Admin" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.User_Admin" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT User_ID, User_Pass, พนังงาน, type_name FROM dbo.User_Admin</CommandText>
@@ -802,7 +844,207 @@ SELECT user_type, type_name FROM user_type WHERE (user_type = @user_type)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="show_finTableAdapter" GeneratorDataComponentClassName="show_finTableAdapter" Name="show_fin" UserDataComponentName="show_finTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_date, report.report_appoint_date, report.report_appoint_time, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อหมอ, 
+                         report_type.type_name, report.report_id, Patient.patient_id_card
+FROM            Employee INNER JOIN
+                         report ON Employee.Emp_ID = report.report_appoint_emp INNER JOIN
+                         Patient ON report.report_patient = Patient.patient_Id INNER JOIN
+                         report_type ON report.report_status = report_type.report_type
+WHERE        (report_type.report_type &gt;= 3)
+ORDER BY report_type.report_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ชื่อนามสกุล" DataSetColumn="ชื่อนามสกุล" />
+              <Mapping SourceColumn="report_date" DataSetColumn="report_date" />
+              <Mapping SourceColumn="report_appoint_date" DataSetColumn="report_appoint_date" />
+              <Mapping SourceColumn="report_appoint_time" DataSetColumn="report_appoint_time" />
+              <Mapping SourceColumn="ชื่อหมอ" DataSetColumn="ชื่อหมอ" />
+              <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
+              <Mapping SourceColumn="report_id" DataSetColumn="report_id" />
+              <Mapping SourceColumn="patient_id_card" DataSetColumn="patient_id_card" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData1" GeneratorSourceName="Fill1" GetMethodModifier="Public" GetMethodName="GetData1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData1" UserSourceName="Fill1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_date, report.report_appoint_date, report.report_appoint_time, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อหมอ, 
+                         report_type.type_name, report.report_id, Patient.patient_id_card
+FROM            Employee INNER JOIN
+                         report ON Employee.Emp_ID = report.report_appoint_emp INNER JOIN
+                         Patient ON report.report_patient = Patient.patient_Id INNER JOIN
+                         report_type ON report.report_status = report_type.report_type
+WHERE        (report_type.report_type &lt;= 2)
+ORDER BY report_type.report_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_date, report.report_appoint_date, report.report_appoint_time, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อหมอ, 
+                         report_type.type_name, report.report_id
+FROM            Employee INNER JOIN
+                         report ON Employee.Emp_ID = report.report_appoint_emp INNER JOIN
+                         Patient ON report.report_patient = Patient.patient_Id INNER JOIN
+                         report_type ON report.report_status = report_type.report_type
+WHERE        (Patient.patient_Fname + ' ' + Patient.patient_Lname LIKE '%' + @Param1 + '%') OR
+                         (Employee.Emp_Fname + ' ' + Employee.Emp_Lname LIKE '%' + @Param1 + '%') OR
+                         (report_type.type_name LIKE '%' + @Param1 + '%')
+ORDER BY report_type.report_type</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="" DataSourceName="" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="after_sel_finTableAdapter" GeneratorDataComponentClassName="after_sel_finTableAdapter" Name="after_sel_fin" UserDataComponentName="after_sel_finTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Medi_supplies.medi_supplies_name, Medi_supplies.medi_supplies_detail, Medi_supplies.medi_supplies_price, List_Medi_drug.List_count, sup_type.type_name
+FROM            List_Medi_drug INNER JOIN
+                         Medi_supplies ON List_Medi_drug.List_detail = Medi_supplies.medi_supplies_Id INNER JOIN
+                         report ON List_Medi_drug.List_id_report = report.report_id INNER JOIN
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type
+WHERE        (report.report_id = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="medi_supplies_name" DataSetColumn="medi_supplies_name" />
+              <Mapping SourceColumn="medi_supplies_detail" DataSetColumn="medi_supplies_detail" />
+              <Mapping SourceColumn="medi_supplies_price" DataSetColumn="medi_supplies_price" />
+              <Mapping SourceColumn="List_count" DataSetColumn="List_count" />
+              <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_medTableAdapter" GeneratorDataComponentClassName="list_medTableAdapter" Name="list_med" UserDataComponentName="list_medTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Medi_supplies.medi_supplies_name, Medi_supplies.medi_supplies_Id, List_Medi_drug.List_count, report.report_id, sup_type.type_name, List_Medi_drug.List_Id
+FROM            List_Medi_drug INNER JOIN
+                         Medi_supplies ON List_Medi_drug.List_detail = Medi_supplies.medi_supplies_Id INNER JOIN
+                         report ON List_Medi_drug.List_id_report = report.report_id INNER JOIN
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="medi_supplies_name" DataSetColumn="medi_supplies_name" />
+              <Mapping SourceColumn="medi_supplies_Id" DataSetColumn="medi_supplies_Id" />
+              <Mapping SourceColumn="List_count" DataSetColumn="List_count" />
+              <Mapping SourceColumn="report_id" DataSetColumn="report_id" />
+              <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
+              <Mapping SourceColumn="List_Id" DataSetColumn="List_Id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Count" Modifier="Public" Name="Count" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Count">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(*) AS Expr1
+FROM            List_Medi_drug INNER JOIN
+                         Medi_supplies ON List_Medi_drug.List_detail = Medi_supplies.medi_supplies_Id INNER JOIN
+                         report ON List_Medi_drug.List_id_report = report.report_id INNER JOIN
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type
+WHERE        (Medi_supplies.medi_supplies_Id = @Param1) AND (report.report_id = @Param2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="medi_supplies_Id" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="medi_supplies_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM List_Medi_drug
+WHERE        (List_Id = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="List_Id" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Medi_supplies.medi_supplies_name, Medi_supplies.medi_supplies_Id, List_Medi_drug.List_count, report.report_id, sup_type.type_name, List_Medi_drug.List_Id
+FROM            List_Medi_drug INNER JOIN
+                         Medi_supplies ON List_Medi_drug.List_detail = Medi_supplies.medi_supplies_Id INNER JOIN
+                         report ON List_Medi_drug.List_id_report = report.report_id INNER JOIN
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type
+WHERE        (report.report_id = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getID" Modifier="Public" Name="getID" QueryType="Scalar" ScalarCallRetval="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="getID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(List_Id) AS Expr1
+FROM            List_Medi_drug
+WHERE        (List_id_report = @Param1) AND (List_detail = @Param2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="List_id_report" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_id_report" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="List_detail" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_detail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO List_Medi_drug
+                         (List_id_report, List_detail, List_count)
+VALUES        (@Param1,@Param2,@Param3)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="List_id_report" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_id_report" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="List_detail" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_detail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="List_count" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="List_count" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       List_Medi_drug
+SET                List_count = @Param1
+WHERE        (List_Id = @Param2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="List_count" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="List_count" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="List_Id" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="data_recTableAdapter" GeneratorDataComponentClassName="data_recTableAdapter" Name="data_rec" UserDataComponentName="data_recTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_date, report.report_appoint_date, report.report_appoint_time, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อหมอ, 
@@ -828,9 +1070,24 @@ ORDER BY report_type.report_type</CommandText>
               <Mapping SourceColumn="patient_id_card" DataSetColumn="patient_id_card" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData1" GeneratorSourceName="Fill1" GetMethodModifier="Public" GetMethodName="GetData1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData1" UserSourceName="Fill1">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_date, report.report_appoint_date, report.report_appoint_time, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อหมอ, 
+                         report_type.type_name, report.report_id, Patient.patient_id_card
+FROM            Employee INNER JOIN
+                         report ON Employee.Emp_ID = report.report_appoint_emp INNER JOIN
+                         Patient ON report.report_patient = Patient.patient_Id INNER JOIN
+                         report_type ON report.report_status = report_type.report_type
+WHERE        (report_type.report_type &lt;= 2)
+ORDER BY report_type.report_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_date, report.report_appoint_date, report.report_appoint_time, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อหมอ, 
                          report_type.type_name, report.report_id
 FROM            Employee INNER JOIN
@@ -849,20 +1106,73 @@ ORDER BY report_type.report_type</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="after_sel_finTableAdapter" GeneratorDataComponentClassName="after_sel_finTableAdapter" Name="after_sel_fin" UserDataComponentName="after_sel_finTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="getDoctorTableAdapter" GeneratorDataComponentClassName="getDoctorTableAdapter" Name="getDoctor" UserDataComponentName="getDoctorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Se_dentral_sql (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.Employee" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS ชื่อนามสกุล, Employee.Emp_ID
+FROM            Department INNER JOIN
+                         Employee ON Department.Dep_ID = Employee.Emp_Dep
+WHERE        (Department.Dep_ID = 3)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ชื่อนามสกุล" DataSetColumn="ชื่อนามสกุล" />
+              <Mapping SourceColumn="Emp_ID" DataSetColumn="Emp_ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="history_recordTableAdapter" GeneratorDataComponentClassName="history_recordTableAdapter" Name="history_record" UserDataComponentName="history_recordTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_id, report.report_date, report_type.type_name
+FROM            Patient INNER JOIN
+                         report ON Patient.patient_Id = report.report_patient INNER JOIN
+                         report_type ON report.report_status = report_type.report_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ชื่อนามสกุล" DataSetColumn="ชื่อนามสกุล" />
+              <Mapping SourceColumn="report_id" DataSetColumn="report_id" />
+              <Mapping SourceColumn="report_date" DataSetColumn="report_date" />
+              <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Patient.patient_Fname + ' ' + Patient.patient_Lname AS ชื่อนามสกุล, report.report_id, report.report_date, report_type.type_name
+FROM            Patient INNER JOIN
+                         report ON Patient.patient_Id = report.report_patient INNER JOIN
+                         report_type ON report.report_status = report_type.report_type
+WHERE        (report.report_patient = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="report_patient" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_patient" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="after_sel_recTableAdapter" GeneratorDataComponentClassName="after_sel_recTableAdapter" Name="after_sel_rec" UserDataComponentName="after_sel_recTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Medi_supplies.medi_supplies_name, Medi_supplies.medi_supplies_detail, Medi_supplies.medi_supplies_price, List_Medi_drug.List_count, sup_type.type_name
 FROM            List_Medi_drug INNER JOIN
                          Medi_supplies ON List_Medi_drug.List_detail = Medi_supplies.medi_supplies_Id INNER JOIN
-                         report ON List_Medi_drug.List_id_report = report.report_id INNER JOIN
-                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type
-WHERE        (report.report_id = @Param1)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type</CommandText>
+                    <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
@@ -874,10 +1184,313 @@ WHERE        (report.report_id = @Param1)</CommandText>
               <Mapping SourceColumn="List_count" DataSetColumn="List_count" />
               <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Medi_supplies.medi_supplies_name, Medi_supplies.medi_supplies_detail, Medi_supplies.medi_supplies_price, List_Medi_drug.List_count, sup_type.type_name
+FROM            List_Medi_drug INNER JOIN
+                         Medi_supplies ON List_Medi_drug.List_detail = Medi_supplies.medi_supplies_Id INNER JOIN
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type
+WHERE        (List_Medi_drug.List_id_report = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="List_id_report" DataSourceName="sedentral.dbo.List_Medi_drug" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="List_id_report" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" Modifier="Public" Name="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1" />
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Emp_depTableAdapter" GeneratorDataComponentClassName="Emp_depTableAdapter" Name="Emp_dep" UserDataComponentName="Emp_depTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Employee.Emp_ID, Employee.Emp_Fname, Employee.Emp_Lname, Employee.Emp_Gender, Employee.Emp_Salary, Department.Dep_Name
+FROM            Department INNER JOIN
+                         Employee ON Department.Dep_ID = Employee.Emp_Dep
+WHERE        (Employee.Emp_ID &gt; 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Emp_ID" DataSetColumn="Emp_ID" />
+              <Mapping SourceColumn="Emp_Fname" DataSetColumn="Emp_Fname" />
+              <Mapping SourceColumn="Emp_Lname" DataSetColumn="Emp_Lname" />
+              <Mapping SourceColumn="Emp_Gender" DataSetColumn="Emp_Gender" />
+              <Mapping SourceColumn="Emp_Salary" DataSetColumn="Emp_Salary" />
+              <Mapping SourceColumn="Dep_Name" DataSetColumn="Dep_Name" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM Employee
+WHERE        (Emp_ID = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Emp_ID" DataSourceName="sedentral.dbo.Employee" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Emp_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Employee
+                         (Emp_Fname, Emp_Lname, Emp_Gender, Emp_Salary, Emp_Dep)
+VALUES        (@Param1,@Param2,@Param3,@Param4,@Param5)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="Emp_Fname" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Emp_Fname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="Emp_Lname" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Emp_Lname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="Emp_Gender" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Emp_Gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="Emp_Salary" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Emp_Salary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="Emp_Dep" DataSourceName="sedentral.dbo.Employee" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Emp_Dep" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery1" Modifier="Public" Name="InsertQuery1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery1">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Employee
+                         ()
+VALUES        ()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       Employee
+SET                Emp_Fname = @Param1, Emp_Lname = @Param2, Emp_Gender = @Param3, Emp_Salary = @Param4, Emp_Dep = @Param5
+WHERE       Emp_ID = @Param6</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="Emp_Fname" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Emp_Fname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="Emp_Lname" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Emp_Lname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="Emp_Gender" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Emp_Gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="Emp_Salary" DataSourceName="sedentral.dbo.Employee" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Emp_Salary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="Emp_Dep" DataSourceName="sedentral.dbo.Employee" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Emp_Dep" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param6" ColumnName="Emp_ID" DataSourceName="sedentral.dbo.Employee" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param6" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Emp_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="medi_s1TableAdapter" GeneratorDataComponentClassName="medi_s1TableAdapter" Name="medi_s1" UserDataComponentName="medi_s1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Medi_supplies.medi_supplies_Id, Medi_supplies.medi_supplies_name, Medi_supplies.medi_supplies_price, Medi_supplies.medi_supplies_detail, Medi_supplies.medi_supplies_count, sup_type.type_name
+FROM            Medi_supplies INNER JOIN
+                         sup_type ON Medi_supplies.medi_supplies_type = sup_type.sup_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="medi_supplies_Id" DataSetColumn="medi_supplies_Id" />
+              <Mapping SourceColumn="medi_supplies_name" DataSetColumn="medi_supplies_name" />
+              <Mapping SourceColumn="medi_supplies_price" DataSetColumn="medi_supplies_price" />
+              <Mapping SourceColumn="medi_supplies_detail" DataSetColumn="medi_supplies_detail" />
+              <Mapping SourceColumn="medi_supplies_count" DataSetColumn="medi_supplies_count" />
+              <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM Medi_supplies
+WHERE        (medi_supplies_Id = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="medi_supplies_Id" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="medi_supplies_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Medi_supplies
+                         (medi_supplies_name, medi_supplies_price, medi_supplies_detail, medi_supplies_count, medi_supplies_type)
+VALUES        (@Param1,@Param2,@Param3,@Param4,@Param5)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="medi_supplies_name" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="medi_supplies_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="medi_supplies_price" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="medi_supplies_price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="medi_supplies_detail" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="medi_supplies_detail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="medi_supplies_count" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="medi_supplies_count" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="medi_supplies_type" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="medi_supplies_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       Medi_supplies
+SET                medi_supplies_name = @Param1, medi_supplies_price = @Param2, medi_supplies_detail = @Param3, medi_supplies_count = @Param4, medi_supplies_type = @Param5
+WHERE        (medi_supplies_Id = @Param6)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="medi_supplies_name" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="medi_supplies_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="medi_supplies_price" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="medi_supplies_price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="medi_supplies_detail" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="medi_supplies_detail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="medi_supplies_count" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="medi_supplies_count" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param5" ColumnName="medi_supplies_type" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="medi_supplies_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param6" ColumnName="medi_supplies_Id" DataSourceName="sedentral.dbo.Medi_supplies" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param6" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="medi_supplies_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="U_aTableAdapter" GeneratorDataComponentClassName="U_aTableAdapter" Name="U_a" UserDataComponentName="U_aTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [User].User_ID, [User].User_Pass, Employee.Emp_Fname + ' ' + Employee.Emp_Lname AS พนักงาน, user_type.type_name, Employee.Emp_ID
+FROM            Employee INNER JOIN
+                         [User] ON Employee.Emp_ID = [User].Fori_User_Id INNER JOIN
+                         user_type ON [User].User_Access = user_type.user_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="User_ID" DataSetColumn="User_ID" />
+              <Mapping SourceColumn="User_Pass" DataSetColumn="User_Pass" />
+              <Mapping SourceColumn="type_name" DataSetColumn="type_name" />
+              <Mapping SourceColumn="พนักงาน" DataSetColumn="พนักงาน" />
+              <Mapping SourceColumn="Emp_ID" DataSetColumn="Emp_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [User]
+WHERE        (User_ID = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [User]
+                         (User_ID, User_Pass, Fori_User_Id, User_Access)
+VALUES        (@Param1,@Param2,@Param3,@Param4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="User_Pass" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Pass" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="Fori_User_Id" DataSourceName="sedentral.dbo.[User]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Fori_User_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="User_Access" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Access" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       [User]
+SET                User_ID = @Param1, User_Pass = @Param2, Fori_User_Id = @Param3, User_Access = @Param4
+WHERE        (User_ID = @Old_User_Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="User_Pass" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Pass" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="Fori_User_Id" DataSourceName="sedentral.dbo.[User]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="Fori_User_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="User_Access" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_Access" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Old_User_Id" ColumnName="User_ID" DataSourceName="sedentral.dbo.[User]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Old_User_Id" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="User_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
-        <Sources />
+        <Sources>
+          <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.Patient" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetPatient_Id" MethodsParameterType="CLR" Modifier="Public" Name="GetPatient_Id" QueryType="Scalar" ScalarCallRetval="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetPatient_Id">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT        patient_Id
+FROM            Patient
+WHERE        (patient_id_card = @Param1)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="patient_id_card" DataSourceName="sedentral.dbo.Patient" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="patient_id_card" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Get_Current_id" MethodsParameterType="CLR" Modifier="Public" Name="Get_Current_id" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Get_Current_id">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT        MAX(report_id) AS Current_id_add
+FROM            report</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Create_report" MethodsParameterType="CLR" Modifier="Public" Name="Create_report" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Create_report">
+            <InsertCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>INSERT INTO report
+                         (report_patient, report_date, report_status)
+VALUES        (@Param1, CURRENT_TIMESTAMP, 1)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="report_patient" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_patient" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </InsertCommand>
+          </DbSource>
+          <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" MethodsParameterType="CLR" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
+            <UpdateCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>UPDATE       report
+SET                report_appoint_has = @Param1, report_appoint_date = @Param2, report_appoint_time = @Param3, report_appoint_emp = @Param4
+WHERE        (report_id = @Param5)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="report_appoint_has" DataSourceName="sedentral.dbo.report" DataTypeServer="varchar(1)" DbType="AnsiString" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="1" SourceColumn="report_appoint_has" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="report_appoint_date" DataSourceName="sedentral.dbo.report" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="report_appoint_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="report_appoint_time" DataSourceName="sedentral.dbo.report" DataTypeServer="time" DbType="AnsiString" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Time" Scale="0" Size="5" SourceColumn="report_appoint_time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="report_appoint_emp" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param4" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_appoint_emp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="false" AutogeneratedName="Param5" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param5" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                </Parameters>
+              </DbCommand>
+            </UpdateCommand>
+          </DbSource>
+          <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Set_No_ap" MethodsParameterType="CLR" Modifier="Public" Name="Set_No_ap" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="Set_No_ap">
+            <UpdateCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>UPDATE       report
+SET                report_appoint_has = 'N', report_appoint_emp = '0'
+WHERE        (report_id = @Param1)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                </Parameters>
+              </DbCommand>
+            </UpdateCommand>
+          </DbSource>
+          <DbSource ConnectionRef="Dentral_Conn (MySettings)" DbObjectName="sedentral.dbo.report" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Get_PID_RID" MethodsParameterType="CLR" Modifier="Public" Name="Get_PID_RID" QueryType="Scalar" ScalarCallRetval="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Get_PID_RID">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT        report_patient
+FROM            report
+WHERE        (report_id = @Param1)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="report_id" DataSourceName="sedentral.dbo.report" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="report_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
@@ -1379,6 +1992,270 @@ WHERE        (report.report_id = @Param1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="list_med" msprop:Generator_TableClassName="list_medDataTable" msprop:Generator_TableVarName="tablelist_med" msprop:Generator_RowChangedName="list_medRowChanged" msprop:Generator_TablePropName="list_med" msprop:Generator_RowDeletingName="list_medRowDeleting" msprop:Generator_RowChangingName="list_medRowChanging" msprop:Generator_RowEvHandlerName="list_medRowChangeEventHandler" msprop:Generator_RowDeletedName="list_medRowDeleted" msprop:Generator_RowClassName="list_medRow" msprop:Generator_UserTableName="list_med" msprop:Generator_RowEvArgName="list_medRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="medi_supplies_name" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_name" msprop:Generator_ColumnPropNameInRow="medi_supplies_name" msprop:Generator_ColumnPropNameInTable="medi_supplies_nameColumn" msprop:Generator_UserColumnName="medi_supplies_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medi_supplies_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_Id" msprop:Generator_ColumnPropNameInRow="medi_supplies_Id" msprop:Generator_ColumnPropNameInTable="medi_supplies_IdColumn" msprop:Generator_UserColumnName="medi_supplies_Id" type="xs:long" />
+              <xs:element name="List_count" msprop:Generator_ColumnVarNameInTable="columnList_count" msprop:Generator_ColumnPropNameInRow="List_count" msprop:Generator_ColumnPropNameInTable="List_countColumn" msprop:Generator_UserColumnName="List_count" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="report_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnreport_id" msprop:Generator_ColumnPropNameInRow="report_id" msprop:Generator_ColumnPropNameInTable="report_idColumn" msprop:Generator_UserColumnName="report_id" type="xs:long" />
+              <xs:element name="type_name" msprop:Generator_ColumnVarNameInTable="columntype_name" msprop:Generator_ColumnPropNameInRow="type_name" msprop:Generator_ColumnPropNameInTable="type_nameColumn" msprop:Generator_UserColumnName="type_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="List_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnList_Id" msprop:Generator_ColumnPropNameInRow="List_Id" msprop:Generator_ColumnPropNameInTable="List_IdColumn" msprop:Generator_UserColumnName="List_Id" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="data_rec" msprop:Generator_TableClassName="data_recDataTable" msprop:Generator_TableVarName="tabledata_rec" msprop:Generator_TablePropName="data_rec" msprop:Generator_RowDeletingName="data_recRowDeleting" msprop:Generator_RowChangingName="data_recRowChanging" msprop:Generator_RowEvHandlerName="data_recRowChangeEventHandler" msprop:Generator_RowDeletedName="data_recRowDeleted" msprop:Generator_UserTableName="data_rec" msprop:Generator_RowChangedName="data_recRowChanged" msprop:Generator_RowEvArgName="data_recRowChangeEvent" msprop:Generator_RowClassName="data_recRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ชื่อนามสกุล" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnชื่อนามสกุล" msprop:Generator_ColumnPropNameInRow="ชื่อนามสกุล" msprop:Generator_ColumnPropNameInTable="ชื่อนามสกุลColumn" msprop:Generator_UserColumnName="ชื่อนามสกุล" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="report_date" msprop:Generator_ColumnVarNameInTable="columnreport_date" msprop:Generator_ColumnPropNameInRow="report_date" msprop:Generator_ColumnPropNameInTable="report_dateColumn" msprop:Generator_UserColumnName="report_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="report_appoint_date" msprop:Generator_ColumnVarNameInTable="columnreport_appoint_date" msprop:Generator_ColumnPropNameInRow="report_appoint_date" msprop:Generator_ColumnPropNameInTable="report_appoint_dateColumn" msprop:Generator_UserColumnName="report_appoint_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="report_appoint_time" msprop:Generator_ColumnVarNameInTable="columnreport_appoint_time" msprop:Generator_ColumnPropNameInRow="report_appoint_time" msprop:Generator_ColumnPropNameInTable="report_appoint_timeColumn" msprop:Generator_UserColumnName="report_appoint_time" type="xs:duration" minOccurs="0" />
+              <xs:element name="ชื่อหมอ" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnชื่อหมอ" msprop:Generator_ColumnPropNameInRow="ชื่อหมอ" msprop:Generator_ColumnPropNameInTable="ชื่อหมอColumn" msprop:Generator_UserColumnName="ชื่อหมอ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_name" msprop:Generator_ColumnVarNameInTable="columntype_name" msprop:Generator_ColumnPropNameInRow="type_name" msprop:Generator_ColumnPropNameInTable="type_nameColumn" msprop:Generator_UserColumnName="type_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="report_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnreport_id" msprop:Generator_ColumnPropNameInRow="report_id" msprop:Generator_ColumnPropNameInTable="report_idColumn" msprop:Generator_UserColumnName="report_id" type="xs:long" />
+              <xs:element name="patient_id_card" msprop:Generator_ColumnVarNameInTable="columnpatient_id_card" msprop:Generator_ColumnPropNameInRow="patient_id_card" msprop:Generator_ColumnPropNameInTable="patient_id_cardColumn" msprop:Generator_UserColumnName="patient_id_card" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="getDoctor" msprop:Generator_TableClassName="getDoctorDataTable" msprop:Generator_TableVarName="tablegetDoctor" msprop:Generator_RowChangedName="getDoctorRowChanged" msprop:Generator_TablePropName="getDoctor" msprop:Generator_RowDeletingName="getDoctorRowDeleting" msprop:Generator_RowChangingName="getDoctorRowChanging" msprop:Generator_RowEvHandlerName="getDoctorRowChangeEventHandler" msprop:Generator_RowDeletedName="getDoctorRowDeleted" msprop:Generator_RowClassName="getDoctorRow" msprop:Generator_UserTableName="getDoctor" msprop:Generator_RowEvArgName="getDoctorRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ชื่อนามสกุล" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnชื่อนามสกุล" msprop:Generator_ColumnPropNameInRow="ชื่อนามสกุล" msprop:Generator_ColumnPropNameInTable="ชื่อนามสกุลColumn" msprop:Generator_UserColumnName="ชื่อนามสกุล" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEmp_ID" msprop:Generator_ColumnPropNameInRow="Emp_ID" msprop:Generator_ColumnPropNameInTable="Emp_IDColumn" msprop:Generator_UserColumnName="Emp_ID" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="history_record" msprop:Generator_TableClassName="history_recordDataTable" msprop:Generator_TableVarName="tablehistory_record" msprop:Generator_TablePropName="history_record" msprop:Generator_RowDeletingName="history_recordRowDeleting" msprop:Generator_RowChangingName="history_recordRowChanging" msprop:Generator_RowEvHandlerName="history_recordRowChangeEventHandler" msprop:Generator_RowDeletedName="history_recordRowDeleted" msprop:Generator_UserTableName="history_record" msprop:Generator_RowChangedName="history_recordRowChanged" msprop:Generator_RowEvArgName="history_recordRowChangeEvent" msprop:Generator_RowClassName="history_recordRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ชื่อนามสกุล" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnชื่อนามสกุล" msprop:Generator_ColumnPropNameInRow="ชื่อนามสกุล" msprop:Generator_ColumnPropNameInTable="ชื่อนามสกุลColumn" msprop:Generator_UserColumnName="ชื่อนามสกุล" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="report_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnreport_id" msprop:Generator_ColumnPropNameInRow="report_id" msprop:Generator_ColumnPropNameInTable="report_idColumn" msprop:Generator_UserColumnName="report_id" type="xs:long" />
+              <xs:element name="report_date" msprop:Generator_ColumnVarNameInTable="columnreport_date" msprop:Generator_ColumnPropNameInRow="report_date" msprop:Generator_ColumnPropNameInTable="report_dateColumn" msprop:Generator_UserColumnName="report_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="type_name" msprop:Generator_ColumnVarNameInTable="columntype_name" msprop:Generator_ColumnPropNameInRow="type_name" msprop:Generator_ColumnPropNameInTable="type_nameColumn" msprop:Generator_UserColumnName="type_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="after_sel_rec" msprop:Generator_TableClassName="after_sel_recDataTable" msprop:Generator_TableVarName="tableafter_sel_rec" msprop:Generator_TablePropName="after_sel_rec" msprop:Generator_RowDeletingName="after_sel_recRowDeleting" msprop:Generator_RowChangingName="after_sel_recRowChanging" msprop:Generator_RowEvHandlerName="after_sel_recRowChangeEventHandler" msprop:Generator_RowDeletedName="after_sel_recRowDeleted" msprop:Generator_UserTableName="after_sel_rec" msprop:Generator_RowChangedName="after_sel_recRowChanged" msprop:Generator_RowEvArgName="after_sel_recRowChangeEvent" msprop:Generator_RowClassName="after_sel_recRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="medi_supplies_name" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_name" msprop:Generator_ColumnPropNameInRow="medi_supplies_name" msprop:Generator_ColumnPropNameInTable="medi_supplies_nameColumn" msprop:Generator_UserColumnName="medi_supplies_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medi_supplies_detail" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_detail" msprop:Generator_ColumnPropNameInRow="medi_supplies_detail" msprop:Generator_ColumnPropNameInTable="medi_supplies_detailColumn" msprop:Generator_UserColumnName="medi_supplies_detail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medi_supplies_price" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_price" msprop:Generator_ColumnPropNameInRow="medi_supplies_price" msprop:Generator_ColumnPropNameInTable="medi_supplies_priceColumn" msprop:Generator_UserColumnName="medi_supplies_price" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="List_count" msprop:Generator_ColumnVarNameInTable="columnList_count" msprop:Generator_ColumnPropNameInRow="List_count" msprop:Generator_ColumnPropNameInTable="List_countColumn" msprop:Generator_UserColumnName="List_count" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_name" msprop:Generator_ColumnVarNameInTable="columntype_name" msprop:Generator_ColumnPropNameInRow="type_name" msprop:Generator_ColumnPropNameInTable="type_nameColumn" msprop:Generator_UserColumnName="type_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Emp_dep" msprop:Generator_TableClassName="Emp_depDataTable" msprop:Generator_TableVarName="tableEmp_dep" msprop:Generator_RowChangedName="Emp_depRowChanged" msprop:Generator_TablePropName="Emp_dep" msprop:Generator_RowDeletingName="Emp_depRowDeleting" msprop:Generator_RowChangingName="Emp_depRowChanging" msprop:Generator_RowEvHandlerName="Emp_depRowChangeEventHandler" msprop:Generator_RowDeletedName="Emp_depRowDeleted" msprop:Generator_RowClassName="Emp_depRow" msprop:Generator_UserTableName="Emp_dep" msprop:Generator_RowEvArgName="Emp_depRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emp_ID" msprop:Generator_ColumnVarNameInTable="columnEmp_ID" msprop:Generator_ColumnPropNameInRow="Emp_ID" msprop:Generator_ColumnPropNameInTable="Emp_IDColumn" msprop:Generator_UserColumnName="Emp_ID" type="xs:long" />
+              <xs:element name="Emp_Fname" msprop:Generator_ColumnVarNameInTable="columnEmp_Fname" msprop:Generator_ColumnPropNameInRow="Emp_Fname" msprop:Generator_ColumnPropNameInTable="Emp_FnameColumn" msprop:Generator_UserColumnName="Emp_Fname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_Lname" msprop:Generator_ColumnVarNameInTable="columnEmp_Lname" msprop:Generator_ColumnPropNameInRow="Emp_Lname" msprop:Generator_ColumnPropNameInTable="Emp_LnameColumn" msprop:Generator_UserColumnName="Emp_Lname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_Gender" msprop:Generator_ColumnVarNameInTable="columnEmp_Gender" msprop:Generator_ColumnPropNameInRow="Emp_Gender" msprop:Generator_ColumnPropNameInTable="Emp_GenderColumn" msprop:Generator_UserColumnName="Emp_Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_Salary" msprop:Generator_ColumnVarNameInTable="columnEmp_Salary" msprop:Generator_ColumnPropNameInRow="Emp_Salary" msprop:Generator_ColumnPropNameInTable="Emp_SalaryColumn" msprop:Generator_UserColumnName="Emp_Salary" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dep_Name" msprop:Generator_ColumnVarNameInTable="columnDep_Name" msprop:Generator_ColumnPropNameInRow="Dep_Name" msprop:Generator_ColumnPropNameInTable="Dep_NameColumn" msprop:Generator_UserColumnName="Dep_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="medi_s1" msprop:Generator_TableClassName="medi_s1DataTable" msprop:Generator_TableVarName="tablemedi_s1" msprop:Generator_RowChangedName="medi_s1RowChanged" msprop:Generator_TablePropName="medi_s1" msprop:Generator_RowDeletingName="medi_s1RowDeleting" msprop:Generator_RowChangingName="medi_s1RowChanging" msprop:Generator_RowEvHandlerName="medi_s1RowChangeEventHandler" msprop:Generator_RowDeletedName="medi_s1RowDeleted" msprop:Generator_RowClassName="medi_s1Row" msprop:Generator_UserTableName="medi_s1" msprop:Generator_RowEvArgName="medi_s1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="medi_supplies_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_Id" msprop:Generator_ColumnPropNameInRow="medi_supplies_Id" msprop:Generator_ColumnPropNameInTable="medi_supplies_IdColumn" msprop:Generator_UserColumnName="medi_supplies_Id" type="xs:long" />
+              <xs:element name="medi_supplies_name" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_name" msprop:Generator_ColumnPropNameInRow="medi_supplies_name" msprop:Generator_ColumnPropNameInTable="medi_supplies_nameColumn" msprop:Generator_UserColumnName="medi_supplies_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medi_supplies_price" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_price" msprop:Generator_ColumnPropNameInRow="medi_supplies_price" msprop:Generator_ColumnPropNameInTable="medi_supplies_priceColumn" msprop:Generator_UserColumnName="medi_supplies_price" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medi_supplies_detail" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_detail" msprop:Generator_ColumnPropNameInRow="medi_supplies_detail" msprop:Generator_ColumnPropNameInTable="medi_supplies_detailColumn" msprop:Generator_UserColumnName="medi_supplies_detail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="medi_supplies_count" msprop:Generator_ColumnVarNameInTable="columnmedi_supplies_count" msprop:Generator_ColumnPropNameInRow="medi_supplies_count" msprop:Generator_ColumnPropNameInTable="medi_supplies_countColumn" msprop:Generator_UserColumnName="medi_supplies_count" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_name" msprop:Generator_ColumnVarNameInTable="columntype_name" msprop:Generator_ColumnPropNameInRow="type_name" msprop:Generator_ColumnPropNameInTable="type_nameColumn" msprop:Generator_UserColumnName="type_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="U_a" msprop:Generator_TableClassName="U_aDataTable" msprop:Generator_TableVarName="tableU_a" msprop:Generator_TablePropName="U_a" msprop:Generator_RowDeletingName="U_aRowDeleting" msprop:Generator_RowChangingName="U_aRowChanging" msprop:Generator_RowEvHandlerName="U_aRowChangeEventHandler" msprop:Generator_RowDeletedName="U_aRowDeleted" msprop:Generator_UserTableName="U_a" msprop:Generator_RowChangedName="U_aRowChanged" msprop:Generator_RowEvArgName="U_aRowChangeEvent" msprop:Generator_RowClassName="U_aRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="User_ID" msprop:Generator_ColumnVarNameInTable="columnUser_ID" msprop:Generator_ColumnPropNameInRow="User_ID" msprop:Generator_ColumnPropNameInTable="User_IDColumn" msprop:Generator_UserColumnName="User_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="User_Pass" msprop:Generator_ColumnVarNameInTable="columnUser_Pass" msprop:Generator_ColumnPropNameInRow="User_Pass" msprop:Generator_ColumnPropNameInTable="User_PassColumn" msprop:Generator_UserColumnName="User_Pass" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type_name" msprop:Generator_ColumnVarNameInTable="columntype_name" msprop:Generator_ColumnPropNameInRow="type_name" msprop:Generator_ColumnPropNameInTable="type_nameColumn" msprop:Generator_UserColumnName="type_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="พนักงาน" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnพนักงาน" msprop:Generator_ColumnPropNameInRow="พนักงาน" msprop:Generator_ColumnPropNameInTable="พนักงานColumn" msprop:Generator_UserColumnName="พนักงาน" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEmp_ID" msprop:Generator_ColumnPropNameInRow="Emp_ID" msprop:Generator_ColumnPropNameInTable="Emp_IDColumn" msprop:Generator_UserColumnName="Emp_ID" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1437,6 +2314,34 @@ WHERE        (report.report_id = @Param1)</CommandText>
       <xs:selector xpath=".//mstns:show_fin" />
       <xs:field xpath="mstns:report_id" />
     </xs:unique>
+    <xs:unique name="data_rec_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:data_rec" />
+      <xs:field xpath="mstns:report_id" />
+    </xs:unique>
+    <xs:unique name="getDoctor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:getDoctor" />
+      <xs:field xpath="mstns:Emp_ID" />
+    </xs:unique>
+    <xs:unique name="history_record_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:history_record" />
+      <xs:field xpath="mstns:report_id" />
+    </xs:unique>
+    <xs:unique name="Emp_dep_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Emp_dep" />
+      <xs:field xpath="mstns:Emp_ID" />
+    </xs:unique>
+    <xs:unique name="medi_s1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:medi_s1" />
+      <xs:field xpath="mstns:medi_supplies_Id" />
+    </xs:unique>
+    <xs:unique name="U_a_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:U_a" />
+      <xs:field xpath="mstns:User_ID" />
+    </xs:unique>
+    <xs:keyref name="Employee_User" refer="Employee_Constraint1" msprop:rel_Generator_UserChildTable="User" msprop:rel_Generator_ChildPropName="GetUserRows" msprop:rel_Generator_UserRelationName="Employee_User" msprop:rel_Generator_ParentPropName="EmployeeRow" msprop:rel_Generator_RelationVarName="relationEmployee_User" msprop:rel_Generator_UserParentTable="Employee" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:User" />
+      <xs:field xpath="mstns:Fori_User_Id" />
+    </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -1447,6 +2352,9 @@ WHERE        (report.report_id = @Param1)</CommandText>
       <msdata:Relationship name="FK_report_Employee" msdata:parent="Employee" msdata:child="report" msdata:parentkey="Emp_ID" msdata:childkey="report_appoint_emp" msprop:Generator_UserChildTable="report" msprop:Generator_ChildPropName="GetreportRows" msprop:Generator_UserRelationName="FK_report_Employee" msprop:Generator_RelationVarName="relationFK_report_Employee" msprop:Generator_UserParentTable="Employee" msprop:Generator_ParentPropName="EmployeeRow" />
       <msdata:Relationship name="FK_report_Patient" msdata:parent="Patient" msdata:child="report" msdata:parentkey="patient_Id" msdata:childkey="report_patient" msprop:Generator_UserChildTable="report" msprop:Generator_ChildPropName="GetreportRows" msprop:Generator_UserRelationName="FK_report_Patient" msprop:Generator_RelationVarName="relationFK_report_Patient" msprop:Generator_UserParentTable="Patient" msprop:Generator_ParentPropName="PatientRow" />
       <msdata:Relationship name="FK_report_report_type" msdata:parent="report_type" msdata:child="report" msdata:parentkey="report_type" msdata:childkey="report_status" msprop:Generator_UserChildTable="report" msprop:Generator_ChildPropName="GetreportRows" msprop:Generator_UserRelationName="FK_report_report_type" msprop:Generator_ParentPropName="report_typeRow" msprop:Generator_RelationVarName="relationFK_report_report_type" msprop:Generator_UserParentTable="report_type" />
+      <msdata:Relationship name="FK_report_Employee1" msdata:parent="getDoctor" msdata:child="report" msdata:parentkey="Emp_ID" msdata:childkey="report_appoint_emp" msprop:Generator_UserChildTable="report" msprop:Generator_ChildPropName="GetreportRows" msprop:Generator_UserRelationName="FK_report_Employee1" msprop:Generator_ParentPropName="getDoctorRow" msprop:Generator_RelationVarName="relationFK_report_Employee1" msprop:Generator_UserParentTable="getDoctor" />
+      <msdata:Relationship name="FK_List_Medi_drug_Medi_supplies1" msdata:parent="medi_s1" msdata:child="List_Medi_drug" msdata:parentkey="medi_supplies_Id" msdata:childkey="List_detail" msprop:Generator_UserChildTable="List_Medi_drug" msprop:Generator_ChildPropName="GetList_Medi_drugRows" msprop:Generator_UserRelationName="FK_List_Medi_drug_Medi_supplies1" msprop:Generator_ParentPropName="medi_s1Row" msprop:Generator_RelationVarName="relationFK_List_Medi_drug_Medi_supplies1" msprop:Generator_UserParentTable="medi_s1" />
+      <msdata:Relationship name="FK_report_Employee2" msdata:parent="U_a" msdata:child="report" msdata:parentkey="Emp_ID" msdata:childkey="report_appoint_emp" msprop:Generator_UserChildTable="report" msprop:Generator_ChildPropName="GetreportRows" msprop:Generator_UserRelationName="FK_report_Employee2" msprop:Generator_RelationVarName="relationFK_report_Employee2" msprop:Generator_UserParentTable="U_a" msprop:Generator_ParentPropName="U_aRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

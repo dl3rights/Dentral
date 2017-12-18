@@ -57,11 +57,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=""192.168.6.11, 1433"";Initial Catalog=sedentral;Persist Security Info="& _ 
-            "True;User ID=se_admin;Password=Dentis1234")>  _
-        Public ReadOnly Property Se_dentral_sql() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=""192.168.6.11, 1433"";Initial Catalog=sedentral;User ID=se_admin;Passw"& _ 
+            "ord=Dentis1234")>  _
+        Public ReadOnly Property Dentral_Conn() As String
             Get
-                Return CType(Me("Se_dentral_sql"),String)
+                Return CType(Me("Dentral_Conn"),String)
             End Get
         End Property
     End Class
